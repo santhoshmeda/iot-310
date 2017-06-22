@@ -34,7 +34,7 @@ mqttc.on_connect = on_connect
 mqttc.connect(brokerHost, brokerPort, brokerTimeout)
 
 # initialize message dictionary
-msg = {'topic':localTopic, 'payload':"", 'qos':0, 'retain':False}
+msg = {'topic':brokerTopic, 'payload':"", 'qos':0, 'retain':False}
 
 pi_sense.clear_display()
 # loop
