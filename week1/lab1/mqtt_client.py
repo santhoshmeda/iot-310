@@ -51,7 +51,7 @@ for i in range(1,9):
     mqttc.publish(brokerTopic, msg['payload'], 0)
 
     # clear LED Matrix
-    pi_sense.clear_display
+    pi_sense.clear_display()
 
     time.sleep(2.0)
 
