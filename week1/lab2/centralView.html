@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="node_modules/bootstrap/favicon.ico">
+
+    <title>CENTRAL FieldView</title>
+    <!-- Based on standard template from: https://v4-alpha.getbootstrap.com/examples/ -->
+    <!-- Bootstrap core CSS -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        // Define the websocket MQTT endpoint
+        var wsMQTTConnectionString = "ws://echo.websocket.org"
+
+        // Create an instance of a WebSocket, set to desired endpoint
+        var websocket = new WebSocket(wsMQTTConnectionString);
+
+        // Send test message
+        var testMessage = '{ data: 12345678 }'
+        websocket.onopen = function () {
+            screenPrint('Successfully connected to: ' + wsMQTTConnectionString)
+            screenPrint('<span>SENDING TEST MESSAGE: ' + testMessage + '</span>')
+            websocket.send(testMessage)
+        };
+
+        websocket.onmessage = function (event) {
+            screenPrint('<span style="color: blue;">RESPONSE: ' + event.data + '</span>');
+        };
+
+        websocket.onerror = function (event) {
+            screenPrint('<span style="color: red;">ERROR:</span> ' + event.data);
+        };
+
+        websocket.close = function (event) {
+            screenPrint('<span style="color: red;">ERROR:</span> ' + event.data);
+        };
+
+        function screenPrint(message) {
+            // Append to div
+            $("#output").append(message + '<br/>');
+        };
+    </script>
+
+
+
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <a class="navbar-brand" href="#">CENTRAL FieldView</a>
+    </nav>
+
+    <div id="below-nav" class="container-fluid">
+        <div class="row">
+            <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Analytics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Export</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main class="col-sm-9 col-md-10 pt-3">
+            <!-- // Can't figure out why the offsets aren't working, dashboard.css now includes a temp fix with padding-top of 10px -->
+            <!--<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">-->
+                <h2>Electron Test</h2>
+                <span><em>The following test will run within an Electron app</em></span>
+                <p>
+                    We are using Node <script>document.write(process.versions.node)</script>, Chrome <script>document.write(process.versions.chrome)</script>, and Electron <script>document.write(process.versions.electron)</script>.
+                </p>
+                
+                <h2>WebSocket Test</h2>
+
+                <div id="output"></div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // You can also require other files to run in this process
+        require('./renderer.js')
+    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="node_modules/bootstrap/assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="node_modules/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>

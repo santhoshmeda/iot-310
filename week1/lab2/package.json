@@ -1,0 +1,17 @@
+{
+  "name": "centralview",
+  "version": "1.0.0",
+  "description": "City field worker app to monitor devices",
+  "main": "main.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6"
+  },
+  "devDependencies": {
+    "electron": "^1.7.3"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC"
+}
