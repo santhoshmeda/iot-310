@@ -27,8 +27,12 @@ Time to send some real data over the interwebs!
 Using the `centralEdgeV1-Client.py` file provided, modify the `hostname` variable to include your own. We will use a topic channel of **iot-310b** with a subtopic of your hostname.
 
 
-## Setup a MQTT Listener for the RPi
+## Setup a MQTT Server for the RPi
 
 Have the RPi listen to other RPi messages (we've done this before, but good practice). 
 
 Using the `centralEdgeV1-Server.py` file provided, modify the `hostname` variable to include your own. We will use a topic channel of **iot-310b** with a subtopic of your hostname.
+
+## HACKER EDITION: Error Handling for MQTT Listener
+
+Currently, `centralEdgeV1-Server.py` will work fine for strings that contain JSON objects (as it will pase those JSON objects and turn it into a Python dictionary), however if a non-JSON compliant payload is sent it fails and exits. Update the code to support handling of general text (i.e. disregard non-JSON payloads).
