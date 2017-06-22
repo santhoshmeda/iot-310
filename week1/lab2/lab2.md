@@ -65,27 +65,31 @@ $ npm --version
 # v5.0.3
 ```
 
-#### Download the Electron Quick Start app
+#### Install packages
 
-**Note**: For the purposes on this class, I've included all the necessary items from the git repo of [Electon Quick start](https://github.com/electron/electron-quick-start) so it's easier to work with to start *(e.g. Bootstrap 4 has already been added to the package list)*. Feel free to ask any questions if you need to know more.
+**Note**: For the purposes on this class, I've included all the necessary items from the git repo of [Electon Quick start](https://github.com/electron/electron-quick-start) so it's easier to work with to start *(e.g. Bootstrap 4 has already been added to the package list)*. Feel free to download the quick start in a separate folder so you can see what it contains and how it was mixed together for our purposes.
 
 Make sure you are within the **week1/lab2** folder as `npm` creates a folder called `node_modules` where it stores all the binaries for the packages installed. All packages to be installed are listed under `package.json`.
 
 ```bash
 # Install dependencies
-$ npm install
-
-# Run electron (alternatively you can run use "npm start")
-$ electron .
+~week1/lab2:$ npm install
 ```
 
-To exit the Electron app, hit `CTRL+C` (typically twice, one to exit Node.js app and one to exit Electron)
+#### Run Electron app
 
-#### Installing 
+```bash
+# Run electron (alternatively you can run use "npm start")
+~week1/lab2:$ electron .
+```
 
+**Tips**:
+- To exit the Electron app, hit the exit command on your computer (e.g. `CTRL+C` on Mac). You may have to fire it twice (once to get out of Node, another to get out of Electron).
+- Edit HTML/CSS/JS files and hit the refresh shortcut on your computer to see it reflected within the app.
 
-### Troubleshooting
+## HACKER EDITION: App Distribution
 
-Don't forget about MQTTfx for debugging (effectively you are creating the same app!) [http://www.jensd.de/apps/mqttfx/1.5.0/](http://www.jensd.de/apps/mqttfx/1.5.0/)
+**Note**: Hacker Edition assignments are optional, don't count for anything but give you a starting point for where you should head next. If you'd like to use this in a professional setting.
 
-There are more MQTT tools listed here: [http://www.hivemq.com/blog/seven-best-mqtt-client-tools](http://www.hivemq.com/blog/seven-best-mqtt-client-tools)
+Package your Electron app for distribution!!!
+[https://github.com/electron/electron/blob/master/docs/tutorial/application-distribution.md](https://github.com/electron/electron/blob/master/docs/tutorial/application-distribution.md)

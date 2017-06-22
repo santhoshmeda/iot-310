@@ -19,6 +19,15 @@
 
 <body>
     <script>
+        // Because of how Electron and Node integrate it can mess with JQuery
+        // Needs to be included before other libs are defined (e.g. JQuery).
+        // https://electron.atom.io/docs/faq/#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron
+        window.nodeRequire = require;
+        delete window.require;
+        delete window.exports;
+        delete window.module;
+    </script>
+    <script>
         // Define the websocket MQTT endpoint
         var wsMQTTConnectionString = "ws://echo.websocket.org"
 
@@ -85,7 +94,7 @@
                     We are using Node <script>document.write(process.versions.node)</script>, Chrome <script>document.write(process.versions.chrome)</script>, and Electron <script>document.write(process.versions.electron)</script>.
                 </p>
                 
-                <h2>WebSocket Test</h2>
+                <h2>WebSocket MQTT Test</h2>
 
                 <div id="output"></div>
             </main>
