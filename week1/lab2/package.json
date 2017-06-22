@@ -4,7 +4,8 @@
   "description": "City field worker app to monitor devices",
   "main": "main.js",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6"
+    "bootstrap": "^4.0.0-alpha.6",
+    "mqtt": "^2.9.0"
   },
   "devDependencies": {
     "electron": "^1.7.3"

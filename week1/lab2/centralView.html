@@ -26,33 +26,36 @@
         delete window.require;
         delete window.exports;
         delete window.module;
+        // Call require with nodeRequire
     </script>
     <script>
         // Define the websocket MQTT endpoint
-        var wsMQTTConnectionString = "ws://echo.websocket.org"
+        var wsMQTTConnectionString = "ws://iot.eclipse.org:80/ws"
 
-        // Create an instance of a WebSocket, set to desired endpoint
-        var websocket = new WebSocket(wsMQTTConnectionString);
+        var mqtt = nodeRequire('mqtt')
+        var client  = mqtt.connect(wsMQTTConnectionString)
 
-        // Send test message
-        var testMessage = '{ data: 12345678 }'
-        websocket.onopen = function () {
-            screenPrint('Successfully connected to: ' + wsMQTTConnectionString)
-            screenPrint('<span>SENDING TEST MESSAGE: ' + testMessage + '</span>')
-            websocket.send(testMessage)
-        };
+        client.on('connect', function () {
+            // Confirm connection
+            screenPrint('CONNECTED TO: ' + wsMQTTConnectionString)
 
-        websocket.onmessage = function (event) {
-            screenPrint('<span style="color: blue;">RESPONSE: ' + event.data + '</span>');
-        };
+            // Subscribe to channel
+            var topic = 'iot-310B'
+            client.subscribe(topic)
+            screenPrint('SUBSCRIBED TO: ' + topic)
+            
+            // Send test message
+            var testMessage = 'Hello mqtt'
+            screenPrint('SENDING TEST MQTT MSG: ' + testMessage)
+            client.publish(topic, 'Hello mqtt')
+        })
 
-        websocket.onerror = function (event) {
-            screenPrint('<span style="color: red;">ERROR:</span> ' + event.data);
-        };
-
-        websocket.close = function (event) {
-            screenPrint('<span style="color: red;">ERROR:</span> ' + event.data);
-        };
+        client.on('message', function (topic, message) {
+            // message is Buffer
+            console.log(message.toString())
+            screenPrint('<span style="color: blue;">RESPONSE: ' + message + '</span>')
+            client.end()
+        })
 
         function screenPrint(message) {
             // Append to div
@@ -103,7 +106,7 @@
 
     <script>
         // You can also require other files to run in this process
-        require('./renderer.js')
+        nodeRequire('./renderer.js')
     </script>
 
     <!-- Bootstrap core JavaScript

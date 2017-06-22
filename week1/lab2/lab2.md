@@ -1,4 +1,4 @@
-# Lab 2 - Electron
+# Lab 2 - Desktop Applications for Visualization with Electron
 
 ## Overview
 
@@ -76,6 +76,21 @@ Make sure you are within the **week1/lab2** folder as `npm` creates a folder cal
 ~week1/lab2:$ npm install
 ```
 
+#### MQTT over WebSockets
+
+Notice that we are connecting to the MQTT server over WebSockets! We have to find a way to do MQTT and keep a constant connection, so WebSockets is a perfect solution for this. Most modern MQTT brokers provide WebSockets support.
+
+```javascript
+var wsMQTTConnectionString = "ws://iot.eclipse.org:80/ws"
+```
+
+Also notice how we are subscribing (**Note**: This will help in homework)
+
+```javascript
+
+```
+
+
 #### Run Electron app
 
 ```bash
@@ -86,6 +101,10 @@ Make sure you are within the **week1/lab2** folder as `npm` creates a folder cal
 **Tips**:
 - To exit the Electron app, hit the exit command on your computer (e.g. `CTRL+C` on Mac). You may have to fire it twice (once to get out of Node, another to get out of Electron).
 - Edit HTML/CSS/JS files and hit the refresh shortcut on your computer to see it reflected within the app.
+
+#### Verify you see incoming MQTT message
+
+The app is configures to listen on 
 
 ## HACKER EDITION: App Distribution
 
