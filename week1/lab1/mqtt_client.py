@@ -46,11 +46,14 @@ for i in range(1,9):
 
     sensors['host'] = hostname
     msg['payload'] = str(sensors)
-    print("msg["+str(i)+"]:"+msg['payload'])
+    print "msg["+str(i)+"]:"+msg['payload']
 
-#   publish(topic, payload=None, qos=0, retain=False)
-    mqttc.publish('iot/test', msg['payload'], 0)
+    mqttc.publish(brokerTopic, msg['payload'], 0)
+
+    # clear LED Matrix
+    pi_sense.clear_display
+
     time.sleep(2.0)
 
-print('End of MQTT Messages')
+print 'End of MQTT Messages'
 quit()
