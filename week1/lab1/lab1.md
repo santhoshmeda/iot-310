@@ -1,6 +1,6 @@
 # RPi, SenseHAT, and MQTT Revisited
 
-This lab is to get us back up to a stable point with our RPi and make sure everyone is on the same page. All version, libs, etc are running smoothly. We will run through some previous labs to get us up and running, these files have been edited to focus only on their specific use case.
+This lab is to get us collectively back to a stable point with our RPis and make sure everyone is on the same page. All version, libs, etc are running smoothly. We will run through some previous labs to get us up and running, these files have been modified to fit the Course 3 theme and focus only on their specific use case.
 
 Some files require system `python` dependencies:
 - `mqtt` library can be found at the [Paho MQTT site](https://pypi.python.org/pypi/paho-mqtt/1.1#installation).
@@ -10,29 +10,29 @@ Some files require system `python` dependencies:
 
 ## Read SenseHAT data (from Course 1)
 
-Let's find a file that grabs all the data we need from the SenseHAT and provides a JSON object we can use to send to a MQTT broker. Luckily, we built this file in Lab1 of Course 1!
+Let's find a file that grabs all the data we need from the SenseHAT and provides a JSON object we can use to send to a MQTT broker. Luckily, we built something similar in Course 1!
 
-This file has been added for your convenience as `sense.py` within this directory. 
+This file has been added for your convenience as `centralEdgeV1-DeviceTest.py` within this directory. 
 
 ## Sending test data via MQTT client (from Course 2)
 
-Let's make sure we can walk before we run.
+Let's make sure we can crawl before we run.
 
-This file has been added for your convenience as `mqtt_publish.py` within this directory. 
+This file has been added for your convenience as `centralEdgeV1-mqttTest.py` within this directory. 
 
-## SenseHAT data over MQTT (from Course 1, Lab 9)
+## Setup a MQTT Client and send SenseHAT data
 
 Time to send some real data over the interwebs!
 
 Using the `centralEdgeV1-Client.py` file provided, modify the `hostname` variable to include your own. We will use a topic channel of **iot-310b** with a subtopic of your hostname.
 
 
-## Setup a MQTT Server for the RPi
+## Setup a MQTT Server for the RPi and Receive Other SenseHAT data
 
 Have the RPi listen to other RPi messages (we've done this before, but good practice). 
 
 Using the `centralEdgeV1-Server.py` file provided, modify the `hostname` variable to include your own. We will use a topic channel of **iot-310b** with a subtopic of your hostname.
 
-## HACKER EDITION: Error Handling for MQTT Listener
+## HACKER EDITION: Error Handling for MQTT Server
 
 Currently, `centralEdgeV1-Server.py` will work fine for strings that contain JSON objects (as it will pase those JSON objects and turn it into a Python dictionary), however if a non-JSON compliant payload is sent it fails and exits. Update the code to support handling of general text (i.e. disregard non-JSON payloads).
