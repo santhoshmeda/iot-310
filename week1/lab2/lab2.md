@@ -13,13 +13,13 @@ Electron enables you to create desktop applications with web technologies you kn
 
 ### Download Electron Demos
 
-Before you go down the process of working with Electron, it's best to see a final product. `Visual Studio Code`, `Atom` and `Slack` are popular examples created using Electron (*Fun Fact: GitHub created Electron to make Atom*).
+Before you go down the process of working with Electron, it's best to see a final product. *Visual Studio Code*, *Atom* and *Slack* are popular desktop application  examples created using Electron (*Fun Fact: GitHub was originally called Atom Shell, used to build out Atom*).
 
 Download the [Electron Demos App](https://github.com/electron/electron-api-demos/releases) to get a feel for what Electron can do (it shows off native OS API calls too!). Download the latest version (1.3.0 at time of writing) for your OS.
 
 ### Anatomy of an Electron app
 
-An Electron app reflects similarly to a NodeJS application if you've had experience with those projects, if not, no worries -- let's break it down.
+An Electron app reflects a folder structure similar to a NodeJS application structure. If you don't have direct experience with that, no worries -- let's break it down.
 
 **Example project structure**
 
@@ -30,10 +30,6 @@ your-app/
 └── index.html
 ```
 
-The file that describes all the packages needed to run this app are within `package.json`. Electron will first try to execute whatever value is set for `"main"` (typically `main.js`). If a value isn't provided, it will attempt to load `index.js`. 
-
-There is a default `main.js` that will load the `index.html` file as well. These two files will recieve the bulk of the updates/edits.
-
 **Example `package.json`**
 
 ```json
@@ -43,6 +39,10 @@ There is a default `main.js` that will load the `index.html` file as well. These
   "main"    : "main.js"
 }
 ```
+
+The file that describes all the required dependecies/packages needed to run/install  the Electron app are within `package.json`. Electron will first try to execute whatever value is set for `"main"` (typically `main.js`). If a value isn't provided, it will attempt to load `index.js`. 
+
+There is a default `main.js` that will load the `index.html` file as well. These two files will recieve the bulk of the updates/edits.
 
 ## Guide
 
