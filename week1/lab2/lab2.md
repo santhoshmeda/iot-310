@@ -87,7 +87,7 @@ var wsMQTTConnectionString = "ws://iot.eclipse.org:80/ws"
 Also notice how we are subscribing (**Note**: This will help in homework)
 
 ```javascript
-var topic = 'iot-310B'
+var topic = 'iot-310b'
 ```
 
 #### Run Electron app

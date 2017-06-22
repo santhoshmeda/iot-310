@@ -19,7 +19,7 @@ This file has been added for your convenience as `mqtt_publish.py` within this d
 
 ## SenseHAT data over MQTT (from Course 1, Lab 9)
 
-Using the `mqtt_client.py`, modify the `hostname` variable to include your own. We will use a topic channel of **iot-310B** with a subtopic of your hostname.
+Using the `mqtt_client.py`, modify the `hostname` variable to include your own. We will use a topic channel of **iot-310b** with a subtopic of your hostname.
 
 **Note**: Originally the file did this automatically, but during testing it failed so better safe than sorry!
 
@@ -27,7 +27,7 @@ Using the `mqtt_client.py`, modify the `hostname` variable to include your own. 
 
 Have the RPi listen to other RPi messages (we've done this before, but good practice). 
 
-Using the `mqtt_listener.py`, modify the `hostname` variable to include your own. We will use a topic channel of **iot-310B** with a subtopic of your hostname.
+Using the `mqtt_listener.py`, modify the `hostname` variable to include your own. We will use a topic channel of **iot-310b** with a subtopic of your hostname.
 
 **Note**: Originally the file did this automatically, but during testing it failed so better safe than sorry!
 

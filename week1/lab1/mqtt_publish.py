@@ -8,7 +8,7 @@
 # pip install paho-mqtt
 import paho.mqtt.client as mqtt
 
-topic_name = "iot-310B"
+topic_name = "iot-310b"
 
 client = mqtt.Client()
 client.connect("iot.eclipse.org", 1883, 60)

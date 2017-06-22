@@ -23,7 +23,11 @@ They are for the personal use of the students attending the course.
 
 **Online Meeting Room:** [https://uwtest.zoom.us/j/546556168](https://uwtest.zoom.us/j/546556168)
 
-**Instructor: Drew Gislason**, Email: [riortega@uw.edu](mailto:riortega@uw.edu)
+**GitLab Repo Links**
+- [Labs](https://gitlab.com/richardjortega/iot-310b-student.git)
+- [Slides](https://gitlab.com/richardjortega/iot-310b-slides.git)
+
+**Instructor: Richard Ortega**, Email: [riortega@uw.edu](mailto:riortega@uw.edu)
 
 **TA: Bryan Palmer**, Email: [bpalmer@uw.edu](bpalmer@uw.edu)
 
@@ -39,7 +43,6 @@ Password: **piIoT110**  (Note: "I" in IoT is  "capital I" and not "lowercase L")
 
 [UW-PCE IoT Website](https://www.pce.uw.edu/certificates/internet-of-things)  
 [Canvas](https://canvas.uw.edu/)  
-[GitLab Home for Labs](https://gitlab.com/richardjortega/iot-310b-student.git)
 
 [GitLab Home for Slides](https://gitlab.com/richardjortega/iot-310b-slides.git)  
 

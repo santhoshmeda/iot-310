@@ -7,7 +7,7 @@ from sense import PiSenseHat
 hostname = "iot7643"
 brokerHost = "iot.eclipse.org"     # Local MQTT broker
 brokerPort   = 1883          # Local MQTT port
-brokerTopic = "iot-310B"  # Local MQTT topic to monitor
+brokerTopic = "iot-310b"  # Local MQTT topic to monitor
 brokerTimeout = 120          # Local MQTT session timeout
 
 # The callback for when a CONNACK message is received from the broker.
