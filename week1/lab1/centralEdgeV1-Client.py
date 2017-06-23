@@ -2,7 +2,7 @@
 import time
 import socket
 import paho.mqtt.client as paho
-from sense import SenseHat
+from sense import PiSenseHat
 
 hostname = "iot7643"
 brokerHost = "iot.eclipse.org"     # Local MQTT broker
@@ -25,7 +25,7 @@ def displayLine(row):
         time.sleep(0.02)
 
 # Create a sense-hat object
-pi_sense = SenseHat()
+pi_sense = PiSenseHat()
 print 'PI SenseHat Object Created'
 
 # Setup to Publish Sensor Data
