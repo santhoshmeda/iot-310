@@ -9,3 +9,8 @@ This document will provide updates about the course at large if updates were mad
 - Adding a section called **Lab Links** which provides links to all the items used within the lab in case anyone wants to delve further.
 - **Lab Links** added to [week1/lab1/README.md](week1/lab1/README.md)
 - **Lab Links** added to [week1/lab2/README.md](week1/lab2/README.md)
+- Updated following sections to [week1/lab2/README.md](week1/lab2/README.md).
+    - What is NPM?
+    - MQTT over WebSockets
+    - MQTT npm module
+    - Setup the Electron Quick Start app
