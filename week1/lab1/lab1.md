@@ -18,7 +18,7 @@ Send and receive sensor data from device gateways across the city.
 
 Let's find a file that grabs all the data we need from the SenseHAT and provides a JSON object we can use to send to a MQTT broker. Luckily, we built something similar in Course 1!
 
-This file has been added for your convenience as `centralEdgeV1-DeviceTest.py` within this directory. 
+This file has been added for your convenience as `centralEdgeV1DeviceTest.py` within this directory. 
 
 ## Sending test data via MQTT client (from Course 2)
 

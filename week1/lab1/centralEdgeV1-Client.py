@@ -2,7 +2,7 @@
 import time
 import socket
 import paho.mqtt.client as paho
-from centralEdgeV1-DeviceTest import SenseHat
+from centralEdgeV1DeviceTest import SenseHat
 
 hostname = "iot7643"
 brokerHost = "iot.eclipse.org"     # Local MQTT broker
