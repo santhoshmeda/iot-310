@@ -7,6 +7,10 @@ Electron enables you to create desktop applications with web technologies you kn
 - Learn how to build/edit an Electron app.
 - Have an editable Electron app that you can modify to your needs.
 
+## Use Case
+
+City field reps require a desktop maintenance app to evaluate assets (sensor) functionality.
+
 ### Requirements
 
 - Windows, Mac, or Linux machine

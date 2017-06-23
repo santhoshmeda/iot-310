@@ -1,12 +1,18 @@
-# RPi, SenseHAT, and MQTT Revisited
+# RPi, SenseHAT, and MQTT Revisited with a little Node.js
 
-This lab is to get us collectively back to a stable point with our RPis and make sure everyone is on the same page. All version, libs, etc are running smoothly. We will run through some previous labs to get us up and running, these files have been modified to fit the Course 3 theme and focus only on their specific use case.
+## Overview
+
+This lab is to get us collectively back to a stable point with our RPis and make sure everyone is on the same page. All version, libs, etc are running smoothly. We will run through some previous labs to get us up and running, these files have been modified to fit the Course 3 theme and focus only on their specific use case
 
 Some files require system `python` dependencies:
 - `mqtt` library can be found at the [Paho MQTT site](https://pypi.python.org/pypi/paho-mqtt/1.1#installation).
 - `sense-hat` library can be found at the [SenseHAT site](https://github.com/RPi-Distro/python-sense-hat).
 
 **Note**: Originally some files attempted to detect hostname and that worked well in class, but doesn't work well outside of class so went for a more manual approach. 
+
+## Use Case
+
+Send and receive sensor data from device gateways across the city.
 
 ## Read SenseHAT data (from Course 1)
 
@@ -16,9 +22,33 @@ This file has been added for your convenience as `centralEdgeV1-DeviceTest.py` w
 
 ## Sending test data via MQTT client (from Course 2)
 
-Let's make sure we can crawl before we run.
+Let's try something a little different, we've converted a `python` file from Course 2 to be written in `javascript` that we will run on the RPi using `node` for the runtime.
 
-This file has been added for your convenience as `centralEdgeV1-mqttTest.py` within this directory. 
+### Install Node.js and NPM
+
+The following commands will install `node` and `npm` binaries to your RPi.
+
+```bash
+$ curl -sL http://deb.nodesource.com/setup_4.x | sudo -E bash
+$ sudo apt-get -y install nodejs
+```
+
+### Verify successful installation
+
+```bash
+$ node --version
+# v4.8.3
+$ npm --version
+# 2.15.11
+```
+
+This file has been added for your convenience as `centralEdgeV1-mqttTest.js` within this directory.
+
+### Run the code
+
+```bash
+~week/lab1: $ node centralEdgeV1-mqttTest.js
+``` 
 
 ## Setup a MQTT Client and send SenseHAT data
 
