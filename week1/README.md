@@ -11,4 +11,4 @@ Welcome to Week 1 everyone... it's going to be a fun ride, please provide feedba
 
 ![Example Homework](assets/homework1-example.png)
 
-- Send a different payload, on a different channel from the RPi examples we recapped. Show via logs or screenshot.
+- Setup a different MQTT topic to send/receive data from. Have the RPi send SenseHAT data to this new topic and have your Electron application use the new topic to recieve the data.
