@@ -131,6 +131,11 @@ The command `npm start` is calling the following area of the file `package.json`
 ...
 ```
 
+**Example Electron Starter App screenshot**
+
+![ElectronStartApp](../assets/electron-quick-start.png)
+
+
 ## Setup CENTRAL FieldView app
 
 For the purposes on this class, I've included all the necessary items from the git repo of [Electon Quick start](https://github.com/electron/electron-quick-start) so it's easier to work with to start *(e.g. Bootstrap 4 has already been added to the package list)*. Feel free to download the quick start in a separate folder so you can see what it contains and how it was mixed together for our purposes.
