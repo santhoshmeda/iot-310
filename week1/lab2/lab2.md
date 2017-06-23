@@ -44,7 +44,7 @@ your-app/
 }
 ```
 
-The file that describes all the required dependecies/packages needed to run/install  the Electron app are within `package.json`. Electron will first try to execute whatever value is set for `"main"` (typically `main.js`). If a value isn't provided, it will attempt to load `index.js`. 
+The file that describes all the required dependecies/packages needed to run/install  the Electron app are within `package.json`. 
 
 There is a default `main.js` that will load the `index.html` file as well. These two files will recieve the bulk of the updates/edits.
 
@@ -99,9 +99,26 @@ var topic = 'iot-310b'
 
 #### Run Electron app
 
+Electron will first try to execute whatever value is set for `"main"` (typically `main.js`). If a value isn't provided, it will attempt to load `index.js`. 
+
 ```bash
 # Run electron (alternatively you can run use "npm start")
 ~/host/week1/lab2:$ electron .
+```
+
+If you review the `main.js` file, you can notice where the `centralView.html` webpage is being called and loaded.
+
+```javascript
+...
+
+ // and load the index.html of the app.
+  mainWindow.loadURL(url.format({
+    pathname: path.join(__dirname, 'centralView.html'),
+    protocol: 'file:',
+    slashes: true
+  }))
+...
+
 ```
 
 **Tips**:
