@@ -10,6 +10,14 @@ Some files require system `python` dependencies:
 
 **Note**: Originally some files attempted to detect hostname and that worked well in class, but doesn't work well outside of class so went for a more manual approach. 
 
+## Lab Links
+
+- [MQTT python module](https://pypi.python.org/pypi/paho-mqtt/)
+- [SenseHAT python module](https://github.com/RPi-Distro/python-sense-hat)
+- [Node](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/)
+- [MQTT npm module](https://github.com/mqttjs/MQTT.js)
+
 ## Use Case
 
 Send and receive sensor data from device gateways across the city.

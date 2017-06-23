@@ -21,13 +21,13 @@ City field reps require a desktop maintenance app to evaluate assets (sensor) fu
   - CSS framework used for styling
   - Installed via an [bootstrap npm module](https://github.com/twbs/bootstrap) within `package.json`
   - [Bootstrap Dashboard template](https://v4-alpha.getbootstrap.com/examples/dashboard/)
-    - Click file `Save As > Web Page Complete` to save html with corresponding CSS links remove styling/presentation to liking.
-  - [More dashboard examples](https://v4-alpha.getbootstrap.com/examples/)
-- Electron
+    - Click file **Save As > Web Page Complete** within your browser  to save HTML file with corresponding CSS links remove styling/presentation to liking.
+  - [More boostrap starter examples](https://v4-alpha.getbootstrap.com/examples/)
+- [Electron](https://electron.atom.io/)
   - Quick start guide can be found on home page
 - [Node](https://nodejs.org/en/)
 - [NPM](https://www.npmjs.com/)
-- [MQTT npm module]
+- [MQTT npm module](https://github.com/mqttjs/MQTT.js)
 
 ### Download Electron Demos
 
