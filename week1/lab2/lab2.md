@@ -15,6 +15,20 @@ City field reps require a desktop maintenance app to evaluate assets (sensor) fu
 
 - Windows, Mac, or Linux machine
 
+### Lab Links
+
+- [Bootstrap 4 alpha](https://v4-alpha.getbootstrap.com/)
+  - CSS framework used for styling
+  - Installed via an [bootstrap npm module](https://github.com/twbs/bootstrap) within `package.json`
+  - [Bootstrap Dashboard template](https://v4-alpha.getbootstrap.com/examples/dashboard/)
+    - Click file `Save As > Web Page Complete` to save html with corresponding CSS links remove styling/presentation to liking.
+  - [More dashboard examples](https://v4-alpha.getbootstrap.com/examples/)
+- Electron
+  - Quick start guide can be found on home page
+- [Node](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/)
+- [MQTT npm module]
+
 ### Download Electron Demos
 
 Before you go down the process of working with Electron, it's best to see a final product. *Visual Studio Code*, *Atom* and *Slack* are popular desktop application  examples created using Electron (*Fun Fact: GitHub was originally called Atom Shell, used to build out Atom*).
