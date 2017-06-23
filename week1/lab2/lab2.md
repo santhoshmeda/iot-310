@@ -86,6 +86,7 @@ Make sure you are within the **week1/lab2** folder as `npm` creates a folder cal
 
 Notice that we are connecting to the MQTT server over WebSockets! We have to find a way to do MQTT and keep a constant connection, so WebSockets is a perfect solution for this. Most modern MQTT brokers provide WebSockets support.
 
+**Example of MQTT broker url from `centralView.html`** 
 ```javascript
 var wsMQTTConnectionString = "ws://iot.eclipse.org:80/ws"
 ```
