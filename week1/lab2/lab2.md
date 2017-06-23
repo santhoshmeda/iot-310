@@ -63,9 +63,9 @@ Installing Node.js will also give you a package manager called `npm`.
 *Note*: Stable or latest real
 
 ```bash
-$ node --version
+host$ node --version
 # v8.1.2
-$ npm --version
+host$ npm --version
 # v5.0.3
 ```
 
@@ -77,9 +77,9 @@ Make sure you are within the **week1/lab2** folder as `npm` creates a folder cal
 
 ```bash
 # Install dependencies
-~week1/lab2:$ npm install
+~host/week1/lab2:$ npm install
 # Install electron globally
-~week1/lab2:$ npm install electron -g
+~host/week1/lab2:$ npm install electron -g
 ```
 
 #### MQTT over WebSockets
@@ -100,7 +100,7 @@ var topic = 'iot-310b'
 
 ```bash
 # Run electron (alternatively you can run use "npm start")
-~week1/lab2:$ electron .
+~/host/week1/lab2:$ electron .
 ```
 
 **Tips**:
@@ -109,7 +109,9 @@ var topic = 'iot-310b'
 
 #### Verify you see incoming MQTT message
 
-The app is configures to listen on 
+The app is configures to listen on `iot-310b` topic. You should see messages coming through (provided messages are sending through).
+
+![Example Working](../assets/exampleMQTTfieldview.png)
 
 ## HACKER EDITION: App Distribution
 

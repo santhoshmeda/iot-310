@@ -31,16 +31,16 @@ This file has been added for your convenience as `centralEdgeV1-mqttTest.js` wth
 The following commands will install `node` and `npm` binaries to your RPi.
 
 ```bash
-$ curl -sL http://deb.nodesource.com/setup_4.x | sudo -E bash
-$ sudo apt-get -y install nodejs
+pi$ curl -sL http://deb.nodesource.com/setup_4.x | sudo -E bash
+pi$ sudo apt-get -y install nodejs
 ```
 
 ### Verify successful installation
 
 ```bash
-$ node --version
+pi$ node --version
 # v4.8.3
-$ npm --version
+pi$ npm --version
 # 2.15.11
 ```
 
@@ -49,7 +49,7 @@ $ npm --version
 Run the following command from the **week1/lab1** folder.
 
 ```bash
-~week1/lab1: $ npm install
+~host/week1/lab1: $ npm install
 ```
 
 ### Run the code
@@ -57,7 +57,7 @@ Run the following command from the **week1/lab1** folder.
 Run the following command from the **week1/lab1** folder.
 
 ```bash
-~week1/lab1: $ node centralEdgeV1-mqttTest.js
+~host/week1/lab1: $ node centralEdgeV1-mqttTest.js
 # Exit with CTRL+C
 ``` 
 
