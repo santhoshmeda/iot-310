@@ -86,7 +86,8 @@ Make sure you are within the **week1/lab2** folder as `npm` creates a folder cal
 
 Notice that we are connecting to the MQTT server over WebSockets! We have to find a way to do MQTT and keep a constant connection, so WebSockets is a perfect solution for this. Most modern MQTT brokers provide WebSockets support.
 
-**Example of MQTT broker url from `centralView.html`** 
+**Example of MQTT broker url from `centralView.html`**
+
 ```javascript
 var wsMQTTConnectionString = "ws://iot.eclipse.org:80/ws"
 ```
@@ -122,7 +123,7 @@ If you review the `main.js` file, you can notice where the `centralView.html` we
 ```
 
 **Tips**:
-- To exit the Electron app, hit the exit command on your computer (e.g. `CTRL+C` on Mac). You may have to fire it twice (once to get out of Node, another to get out of Electron).
+- To exit the Electron app, go to the Electron File Menu and select "Electron" and "Quit/Exit".
 - Edit HTML/CSS/JS files and hit the refresh shortcut on your computer to see it reflected within the app.
 
 #### Verify you see incoming MQTT message
