@@ -24,6 +24,8 @@ This file has been added for your convenience as `centralEdgeV1-DeviceTest.py` w
 
 Let's try something a little different, we've converted a `python` file from Course 2 to be written in `javascript` that we will run on the RPi using `node` for the runtime.
 
+This file has been added for your convenience as `centralEdgeV1-mqttTest.js` wthin this directory.
+
 ### Install Node.js and NPM
 
 The following commands will install `node` and `npm` binaries to your RPi.
@@ -42,12 +44,17 @@ $ npm --version
 # 2.15.11
 ```
 
-This file has been added for your convenience as `centralEdgeV1-mqttTest.js` within this directory.
+### Install dependecies via `npm`
+
+```bash
+$ npm install
+```
 
 ### Run the code
 
 ```bash
 ~week/lab1: $ node centralEdgeV1-mqttTest.js
+# Exit with CTRL+C
 ``` 
 
 ## Setup a MQTT Client and send SenseHAT data
