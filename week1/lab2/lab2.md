@@ -78,6 +78,8 @@ Make sure you are within the **week1/lab2** folder as `npm` creates a folder cal
 ```bash
 # Install dependencies
 ~week1/lab2:$ npm install
+# Install electron globally
+~week1/lab2:$ npm install electron -g
 ```
 
 #### MQTT over WebSockets
