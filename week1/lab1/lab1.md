@@ -46,14 +46,18 @@ $ npm --version
 
 ### Install dependecies via `npm`
 
+Run the following command from the **week1/lab1** folder.
+
 ```bash
-$ npm install
+~week1/lab1: $ npm install
 ```
 
 ### Run the code
 
+Run the following command from the **week1/lab1** folder.
+
 ```bash
-~week/lab1: $ node centralEdgeV1-mqttTest.js
+~week1/lab1: $ node centralEdgeV1-mqttTest.js
 # Exit with CTRL+C
 ``` 
 
