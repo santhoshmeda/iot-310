@@ -44,15 +44,28 @@ Password: **piIoT110**  (Note: "I" in IoT is  "capital I" and not "lowercase L")
 [UW-PCE IoT Website](https://www.pce.uw.edu/certificates/internet-of-things)  
 [Canvas](https://canvas.uw.edu/)  
 
-[GitLab Home for Slides](https://gitlab.com/richardjortega/iot-310b-slides.git)  
-
-## Setting up RPi3
+## Raspberry Pi 3 Information
 
 *Note*: Link is from Course 2
 
-[RPi3 Setup](https://gitlab.com/Gislason/iot-210B-student/tree/master/Lab1/PI_SETUP.md)
+[How to Setup your RPi3](https://gitlab.com/Gislason/iot-210B-student/tree/master/Lab1/PI_SETUP.md)
 
-## Session Breakdown (Weekly)
+## Course 3 Required Lab Equipment List
+
+**Note**: [Course 1](https://gitlab.com/iot110/iot110-student/) had more sensors/actuators to use, feel free to use those but primarily we will be using the SenseHAT for collecting data. 
+
+| ITEM #  | DESCRIPTION |  QTY  | COST | COMPONENT | BUY URL| OTHER |
+| :-----: | :---------- | :---: | ---: | :--------: | :-----------------| :-------- |
+| 1  | Raspberry Pi 3 Kit | 1 | $89.95 | [RaspberryPi3](https://www.raspberrypi.org/) | [Adafruit](https://www.adafruit.com/products/3058) |  [Alternate](https://www.amazon.com/dp/B01C6Q4GLE?psc=1) |      
+| 2  | Pi Sensor HAT    | 1 | $39.95 | Sensors | [Adafruit](https://www.adafruit.com/products/2738) | [Astro-Pi](https://astro-pi.org/) |
+| 3  | Camera Module V2 | 1 | $29.60 | Sensors | [Amazon](https://www.amazon.com/Raspberry-Pi-Camera-Module-Megapixel/dp/B01ER2SKFS)
+| 4  | TFT 5 inch Monitor |	1 | $59.95| | [Adafruit](https://www.adafruit.com/products/2232) | | |
+| 5  | HDMI Flat Cable | 1 | $11.29 | | [Adafruit](https://www.adafruit.com/products/2197) | |
+| 6  | Logitech Wireless Touch Keyboard K400 | 1 | $24.99 | | [Amazon](https://www.amazon.com/Logitech-920-007119-Wireless-Keyboard-Connected/dp/B014EUQOGK/) |
+| 7 | Micro USB Charge Sync GOLD Data Cable | 2 |	$9.98 |	| [Amazon](http://amzn.to/2e49OHk) |
+| 8 | Anker 24W Dual USB Wall Charger PowerPort 2 | 1 | $12.49 | | [Amazon](http://amzn.to/2ejevvC) |
+
+## Session Breakdown
 
 Section 1 | Time Allotted | Schedule
 ----- | ------ | ----

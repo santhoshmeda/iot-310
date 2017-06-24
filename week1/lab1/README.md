@@ -4,11 +4,11 @@
 
 This lab is to get us collectively back to a stable point with our RPis and make sure everyone is on the same page. All version, libs, etc are running smoothly. We will run through some previous labs to get us up and running, these files have been modified to fit the Course 3 theme and focus only on their specific use case
 
-Some files require system `python` dependencies:
+Some files require system `python` dependencies to be installed. These were covered in Course 1, however, here are links to the packages.
 - `mqtt` library can be found at the [Paho MQTT site](https://pypi.python.org/pypi/paho-mqtt/1.1#installation).
 - `sense-hat` library can be found at the [SenseHAT site](https://github.com/RPi-Distro/python-sense-hat).
 
-**Note**: Originally some files attempted to detect hostname and that worked well in class, but doesn't work well outside of class so went for a more manual approach. 
+**Note**: Originally some files attempted to detect hostname and that worked well in class, but doesn't work well outside of class so this was removed in favor of a more manual approach. 
 
 ## Lab Links
 
