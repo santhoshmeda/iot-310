@@ -192,6 +192,8 @@ host ~week2/lab1$ vagrant up
 
 You now know how to work on VMs in an effective manner for local development.
 
+Last thing, if you delete the `Vagrantfile` before destroying your VM you can put yourself in a bad situation (i.e. Vagrant doesn't know how to drive VirtualBox and all references are gone). If that happens, remove the VM from the VirtualBox GUI. Ideally, delete VM instance using `vagrant destroy` and then delete the `Vagrantfile` (if you wanted to). Also, don't make changes inside of VirtualBox GUI, all options and configs should be defined within the `Vagrantfile`.
+
 
 ## Hacker Edition (optional): VirtualBox Settings, Networking and Synced Folders
 
