@@ -1,0 +1,19 @@
+# Requires 'vagrant' - https://www.vagrantup.com/
+#   Supports Windows, Linux, Mac
+# 
+# Usage: vagrant up
+#
+# Vagrant is a command line utility for managing the lifecycle of a virtual machine.
+# Vagrant uses Ruby, so select Ruby for file for syntax highlighting
+# 
+
+Vagrant.configure("2") do |config|
+    # Define virtual machine as Ubuntu 16.04 using Hashicorp Vagrant Box
+    #   More details about boxes at: 
+    # Note: If 16.06 becomes an issue, feel free to use "ubuntu/trusty64" to run Ubuntu 14.04 
+    config.vm.box = "ubuntu/xenial64"
+
+    # Run a shell script upon initial provision
+    # Docs: https://www.vagrantup.com/docs/provisioning/shell.html#external-script
+    config.vm.provision "shell", path: "provisioner.sh"
+end
