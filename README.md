@@ -27,6 +27,13 @@ They are for the personal use of the students attending the course.
 - [Labs](https://gitlab.com/richardjortega/iot-310b-student.git)
 - [Slides](https://gitlab.com/richardjortega/iot-310b-slides.git)
 
+**MQTT Public Brokers**
+
+If you run into a situation where a MQTT broker is not responding or refusing connection, feel free to change the broker.
+
+- [IoT Eclipse MQTT Broker](https://iot.eclipse.org/getting-started#tutorials)
+- [Mosquitto MQTT Broker](http://test.mosquitto.org/)
+
 **Instructor: Richard Ortega**, Email: [riortega@uw.edu](mailto:riortega@uw.edu)
 
 **TA: Bryan Palmer**, Email: [bpalmer@uw.edu](bpalmer@uw.edu)

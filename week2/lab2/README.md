@@ -22,19 +22,22 @@ Investigate a way to optimize application density at the edge devices.
 
 "Docker provides a method of developing, shipping, and running applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host. Containers are lightweight because they don’t need the extra load of a hypervisor, but run directly within the host machine’s kernel. This means you can run more containers on a given hardware combination than if you were using virtual machines. You can even run Docker containers within host machines that are actually virtual machines!" [Source](https://docs.docker.com/engine/docker-overview/)
 
-Let's discuss what containers (in context of Docker) are:
-- An **image** in the Docker context is the binary file that contains your code, your code packages, and any system level dependencies.
-- A **container** is an instance of an image. 
-    
+In the context of Docker, an **image** is the binary file that contains your code, your code packages, and any system level dependencies. A **container** is an instance of an image. 
 
-Now that may not mean a lot right now, but let's analyze containers against VMs because there are similarities. Here are some high-levelSo let's breakdown what this means...
-    - 
-    - Containers don't require resource allocation upfront similar to how VMs do, however you can set resource limits per container.
-    - The best analogy for containers vs. VMs is:
-        - VMs are like houses, Containers are apartments
+This will make more sense during the lab. Right now, it's important to note that at a high-level the following points are key takeaways for containers [Source](https://docs.docker.com/engine/docker-overview/#what-can-i-use-docker-for):
+
+- Fast, consistent delivery of your applications
+    - Work in standardized environments using local containers which provide your applications and services.
+- Responsive deployment and scaling
+    - Because of the portability and how lightweight Docker is, you can dynamically manage workloads, scale up/tear down services with ease in near real-time.
+- Running more workloads on the same hardware
+    - You can increase app density on the same hardware over hypervisor-based virtual machines, so you can use more of your compute capacity to achieve your business goals. Docker is perfect for high density environments and for small and medium deployments where you need to do more with fewer resources (e.g. the Raspberry Pi).
+
+Let's get into it!
+
+## Up and Running with Docker    
 
 
-We know from working with VMs that they are heavyweight (however, lighter than provisioning bare metal services).
 
 ## Docker Hub Overview
 

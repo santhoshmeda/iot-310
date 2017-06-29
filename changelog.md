@@ -14,3 +14,9 @@ This document will provide updates about the course at large if updates were mad
     - MQTT over WebSockets
     - MQTT npm module
     - Setup the Electron Quick Start app
+
+
+## 2017-06-29
+
+- Changed out MQTT broker to [Mosquitto MQTT Broker](http://test.mosquitto.org/) -- updated in previous labs.
+- Finished week2

@@ -1,4 +1,4 @@
-# Week 2: Microservices
+# Week 2: Virtual Machines and Containers
 
 Welcome to Week 2 everyone... it's going to be a fun ride, please provide feedback along the way.
 

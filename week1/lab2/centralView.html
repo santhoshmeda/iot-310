@@ -30,7 +30,7 @@
     </script>
     <script>
         // Define the websocket MQTT endpoint
-        var wsMQTTConnectionString = "ws://iot.eclipse.org:80/ws"
+        var wsMQTTConnectionString = "ws://test.mosquitto.org:8080/"
 
         var mqtt = nodeRequire('mqtt')
         var client  = mqtt.connect(wsMQTTConnectionString)

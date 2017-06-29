@@ -169,6 +169,8 @@ SHELL
 To the following:
 
 ```ruby
+config.vm.provision "file", source: "~/centralEdgeV1-Client.py", destination: "centralEdgeV1-Client.py"
+
 config.vm.provision "shell", inline: <<-SHELL
    # Celebrate!
     echo "I provisioned a headless VM using Vagrant!"
@@ -196,9 +198,20 @@ host ~week2/lab1$ vagrant up
 # ==> default: Python 2.7.12
 ```
 
+What did this do? It updated all the Ubuntu apt packages lists, installed the preferred Python version for this version of Ubuntu, verified installation of Python and added a file called `centralEdgeV1-Client.py`. 
+
+You can access the VM via SSH and run the Python file:
+
+```bash
+host ~week2/lab1$ vagrant ssh
+ubuntuGuestVM$ python centralEdgeV1-Client.py
+```
+
 You now know how to work on VMs in an effective manner for local development.
 
-Last thing, if you delete the `Vagrantfile` before destroying your VM you can put yourself in a bad situation (i.e. Vagrant doesn't know how to drive VirtualBox and all references are gone). If that happens, remove the VM from the VirtualBox GUI. Ideally, delete VM instance using `vagrant destroy` and then delete the `Vagrantfile` (if you wanted to). Also, don't make changes inside of VirtualBox GUI, all options and configs should be defined within the `Vagrantfile`.
+## Troubleshooting
+
+If you delete the `Vagrantfile` before destroying your VM you can put yourself in a bad situation (i.e. Vagrant doesn't know how to drive VirtualBox and all references are gone). If that happens, remove the VM from the VirtualBox GUI. Ideally, delete VM instance using `vagrant destroy` and then delete the `Vagrantfile` (if you wanted to). Also, don't make changes inside of VirtualBox GUI, all options and configs should be defined within the `Vagrantfile`.
 
 
 ## Hacker Edition (optional): VirtualBox Settings, Networking and Synced Folders

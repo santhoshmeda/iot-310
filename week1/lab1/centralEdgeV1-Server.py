@@ -5,7 +5,7 @@ import json
 import ast
 
 hostname = "iot7643"
-brokerHost = "iot.eclipse.org"     # Local MQTT broker
+brokerHost = "test.mosquitto.org"     # Local MQTT broker
 brokerPort   = 1883          # Local MQTT port
 brokerTopic = "iot-310b"  # Local MQTT topic to monitor
 brokerTimeout = 120          # Local MQTT session timeout
