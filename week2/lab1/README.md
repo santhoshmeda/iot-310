@@ -8,7 +8,9 @@ host$: vagrant box add ubuntu/xenial64
 
 ## Overview
 
-This lab will help you get oriented with virtual machines using Vagrant to drive Virtualbox VMs that will ultimately run Ubuntu. Virtual machines are a critical piece to modern cloud infrastructure, in these labs we'll be doing this all locally.
+This lab will help you get oriented with virtual machines using Vagrant to drive Virtualbox VMs that will ultimately run Ubuntu. We will be able to access the VM directly from terminal and control it. 
+
+Virtual machines are a critical piece to modern cloud infrastructure, in these labs we'll be doing this all locally.
 
 If you've ever setup a Virtual Machine before on your machine, you know that the process goes like this:
 
@@ -105,14 +107,14 @@ From here, you can do whatever you would normally want to do with an Ubuntu Linu
 
 ```bash
 # Assumes ssh'ed into VM, play around!
-ubuntuGuestVM$: echo "Hello, world!"
-ubuntuGuestVM$: uname -a 
+ubuntu@ubuntu-xenial:~$ echo "Hello, world!"
+ubuntu@ubuntu-xenial:~$ uname -a 
 ```
 
 Exit the VM:
 
 ```bash
-ubuntuGuestVM$: exit 
+ubuntu@ubuntu-xenial:~$ exit 
 ```
 
 ### Halt the VM, Destroy the VM
@@ -169,10 +171,10 @@ SHELL
 To the following:
 
 ```ruby
-config.vm.provision "file", source: "~/centralEdgeV1-Client.py", destination: "centralEdgeV1-Client.py"
+config.vm.provision "file", source: "centralVirtualDevice.py", destination: "centralVirtualDevice.py"
 
 config.vm.provision "shell", inline: <<-SHELL
-   # Celebrate!
+    # Celebrate!
     echo "I provisioned a headless VM using Vagrant!"
 
     # Update list of packages
@@ -182,6 +184,15 @@ config.vm.provision "shell", inline: <<-SHELL
     # Note: "-y" option is used since we are not in an interactive session.
     #   This will tell the apt-get installer to say "Y" when input is expected
     apt-get install -y python
+
+    # Download pip for Python 2
+    wget https://bootstrap.pypa.io/get-pip.py
+
+    # Install pip for Python 2
+    python get-pip.py
+
+    # Install Python MQTT client
+    pip install paho-mqtt
 
     # Check version
     python --version
@@ -196,18 +207,30 @@ host ~week2/lab1$ vagrant up
 # ==> default: Setting up libpython-stdlib:amd64 (2.7.11-1) ...
 # ==> default: Setting up python (2.7.11-1) ...
 # ==> default: Python 2.7.12
+# ...
 ```
 
-What did this do? It updated all the Ubuntu apt packages lists, installed the preferred Python version for this version of Ubuntu, verified installation of Python and added a file called `centralEdgeV1-Client.py`. 
+What did this do? It updated all the Ubuntu apt packages lists, installed the preferred Python version for this version of Ubuntu, verified installation of Python, added our file called `centralVirtualDevice.py` along with dependencies we need to run that file on a new machine (e.g. `pip` and `paho-mqtt`). 
 
 You can access the VM via SSH and run the Python file:
 
 ```bash
 host ~week2/lab1$ vagrant ssh
-ubuntuGuestVM$ python centralEdgeV1-Client.py
+
+ubuntu@ubuntu-xenial:~$ ls
+# centralVirtualDevice.py
+
+ubuntu@ubuntu-xenial:~$ python centralVirtualDevice.py
 ```
 
 You now know how to work on VMs in an effective manner for local development.
+
+Feel free to shutdown your VM if you want:
+
+```bash
+# Assumes VM is running
+host ~week2/lab1$ vagrant halt
+```
 
 ## Troubleshooting
 
