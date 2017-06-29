@@ -22,14 +22,25 @@ Investigate a way to optimize application density at the edge devices.
 
 "Docker provides a method of developing, shipping, and running applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host. Containers are lightweight because they don’t need the extra load of a hypervisor, but run directly within the host machine’s kernel. This means you can run more containers on a given hardware combination than if you were using virtual machines. You can even run Docker containers within host machines that are actually virtual machines!" [Source](https://docs.docker.com/engine/docker-overview/)
 
-So let's breakdown what this means...
-    - An **image** in the Docker context is the binary file that contains your code, your code packages, and any system level dependencies.
-    - A **container** is an instance of an image. 
+Let's discuss what containers (in context of Docker) are:
+- An **image** in the Docker context is the binary file that contains your code, your code packages, and any system level dependencies.
+- A **container** is an instance of an image. 
+    
+
+Now that may not mean a lot right now, but let's analyze containers against VMs because there are similarities. Here are some high-levelSo let's breakdown what this means...
+    - 
     - Containers don't require resource allocation upfront similar to how VMs do, however you can set resource limits per container.
     - The best analogy for containers vs. VMs is:
         - VMs are like houses, Containers are apartments
 
-## DockerHub Overview
+
+We know from working with VMs that they are heavyweight (however, lighter than provisioning bare metal services).
+
+## Docker Hub Overview
+
+Docker Hub is a cloud-based registry service to link to code repositories, stores custom images, and has a plethora of community-backed images for consumption.
+
+
 
 ## Installing Docker on Host (Hello, World!)
 
