@@ -1,4 +1,4 @@
-# Intro to Container
+# Intro to Containers
 
 ## Overview
 
@@ -26,7 +26,8 @@ So let's breakdown what this means...
     - An **image** in the Docker context is the binary file that contains your code, your code packages, and any system level dependencies.
     - A **container** is an instance of an image. 
     - Containers don't require resource allocation upfront similar to how VMs do, however you can set resource limits per container.
-    
+    - The best analogy for containers vs. VMs is:
+        - VMs are like houses, Containers are apartments
 
 ## DockerHub Overview
 

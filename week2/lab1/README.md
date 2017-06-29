@@ -101,7 +101,13 @@ SSH into the VM!
 host ~week2/lab1$ vagrant ssh
 ```
 
-From here, you can do whatever you would normally want to do with an Ubuntu Linux machine. For instance run `$ uname -a` to see that the underlying system is a Linux kernel (regardless if you're on a Mac or Windows host machine). 
+From here, you can do whatever you would normally want to do with an Ubuntu Linux machine. 
+
+```bash
+# Assumes ssh'ed into VM, play around!
+ubuntuGuestVM$: echo "Hello, world!"
+ubuntuGuestVM$: uname -a 
+```
 
 Exit the VM:
 
