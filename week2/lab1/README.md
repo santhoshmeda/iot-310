@@ -242,6 +242,7 @@ If you delete the `Vagrantfile` before destroying your VM you can put yourself i
 Set VirtualBox configs 
 (e.g. memory/cpus) using: [https://www.vagrantup.com/docs/virtualbox/configuration.html](https://www.vagrantup.com/docs/virtualbox/configuration.html)
 
-Two other areas to learn that are extremely helpful are:
+Other areas to learn that are extremely helpful are:
 - [Networking](https://www.vagrantup.com/intro/getting-started/networking.html)
 - [Synced Folders](https://www.vagrantup.com/intro/getting-started/synced_folders.html)
+- [Shell External Scripts](https://www.vagrantup.com/docs/provisioning/shell.html#external-script)
