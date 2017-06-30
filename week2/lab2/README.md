@@ -151,18 +151,34 @@ Because we created our own `Dockerfile` we need to build a image and have Docker
 host ~/week2/lab2$ docker build -t central_virtual_device .
 ```
 
-- On your host machine, download any [DockerHub](https://hub.docker.com/) (or [Docker Store](https://store.docker.com/search?source=verified&type=image)) image and run a command within a container that demonstrates the application functioning. Take a screenshot and upload it to your Gitlab or Canvas.
-    - For example:
-        - `docker pull python`
-        - Command to run within container: `python --version`
+Look at the new image you've made at:
+
+```bash
+host$ docker images
+```
+
+Now run your container:
+
+```bash
+host$ docker run -it central_virtual_device
+```
+
+This will instantiate a new container based off of the `central_virtual_device` image and will latch onto your terminal. 
+
+If you want to run in a daemonized mode, run:
+
+```bash
+host$ docker run -d central_virtual_device
+```
+
+## Pushing up to Docker Hub
+
+TBD
 
 ## Hacker Edition: Learn about adding app data within containers
 
 - Add a `test.txt` file (with your own arbitrary text) to the image we created using `Dockerfile`. Upload the new image to DockerHub and provide a link to your DockerHub.
     - Tip: Use `COPY` command: [https://docs.docker.com/engine/reference/builder/#copy](https://docs.docker.com/engine/reference/builder/#copy)
 
-
-
-In a standard development workflow with Docker, developers will typically mount their host's application  folder to the container's application folder providing a way to edit code locally on the host and it reflecting immediately within the container.
-
-You can read more about this on [Manage data in containers](https://docs.docker.com/engine/tutorials/dockervolumes/) under the section [Mount a Host Directory as a Data Volume](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-directory-as-a-data-volumeMount)
+- In a standard development workflow with Docker, developers will typically mount their host's application  folder to the container's application folder providing a way to edit code locally on the host and it reflecting immediately within the container.
+    - You can read more about this on [Manage data in containers](https://docs.docker.com/engine/tutorials/dockervolumes/) under the section [Mount a Host Directory as a Data Volume](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-directory-as-a-data-volumeMount)
