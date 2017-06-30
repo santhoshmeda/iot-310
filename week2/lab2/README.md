@@ -200,6 +200,12 @@ host$ docker push richardjortega/central_virtual_device
 
 I can now view my uploaded image at Docker Hub: [https://hub.docker.com/r/richardjortega/central_virtual_device/](https://hub.docker.com/r/richardjortega/central_virtual_device/)
 
+Other people can directly pull the image and run on their machine:
+
+```bash
+host $: docker pull richardjortega/central_virtual_device
+```
+
 ## Hacker Edition: Learn about adding app data within containers
 
 - Add a `test.txt` file (with your own arbitrary text) to the image we created using `Dockerfile`. Upload the new image to DockerHub and provide a link to your DockerHub.
