@@ -159,13 +159,13 @@ Now let's use what we've learned to create a new VM, except now we'll add custom
 
 **Note**: The `Vagrantfile` is written in Ruby, so it's sometimes helpful to change your syntax highlighting to "Ruby" when working in the file.
 
-Open `Vagrantfile` and change the following lines:
+Open `Vagrantfile` and change the following lines (which are commented out near the bottom of the file):
 
 ```ruby
-config.vm.provision "shell", inline: <<-SHELL
-   apt-get update
-   apt-get install -y apache2
-SHELL
+# config.vm.provision "shell", inline: <<-SHELL
+#   apt-get update
+#   apt-get install -y apache2
+# SHELL
 ```
 
 To the following:
