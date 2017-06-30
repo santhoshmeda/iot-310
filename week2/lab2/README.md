@@ -173,7 +173,32 @@ host$ docker run -d central_virtual_device
 
 ## Pushing up to Docker Hub
 
-TBD
+We can also push the image we created to Docker Hub.
+
+- [Signup for Docker Hub](https://hub.docker.com/)
+
+You can now log into Docker Hub from the terminal:
+
+```bash
+# Use the username and password you used in Docker Hub
+host$ docker login
+```
+
+We are going to add another tag for our custom image that will work with Docker Hub Registry
+
+```bash
+# Usage: docker tag [image] [new image name]
+#   Example: docker tag central_virtual_device [dockerHubUsername]/central_virtual_device
+host$ docker tag central_virtual_device richardjortega/central_virtual_device
+```
+
+We can push your image up to Docker Hub so other people can download it:
+
+```bash
+host$ docker push richardjortega/central_virtual_device
+```
+
+I can now view my uploaded image at Docker Hub: [https://hub.docker.com/r/richardjortega/central_virtual_device/](https://hub.docker.com/r/richardjortega/central_virtual_device/)
 
 ## Hacker Edition: Learn about adding app data within containers
 
