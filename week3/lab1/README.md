@@ -14,6 +14,12 @@ pi$ curl -sSL https://get.docker.com | sh
 
 # Add docker to a non-root user
 pi$ sudo usermod -aG docker pi
+
+pi$ docker pull resin/rpi-raspbian
+
+pi$ docker run -it resin/rpi-raspbian bash
+
+pi$ 
 ```
 
 ## Use Case 1 - Live Edition
