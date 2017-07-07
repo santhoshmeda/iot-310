@@ -17,9 +17,14 @@ pi$ sudo usermod -aG docker pi
 
 pi$ docker pull resin/rpi-raspbian
 
+# Play around
 pi$ docker run -it resin/rpi-raspbian bash
 
-pi$ 
+# Build image (this reads from Dockerfile in local directory)
+pi$ docker build -t sense .
+
+# Run in privileged mode
+pi$ docker run -d --privileged=true sense
 ```
 
 ## Use Case 1 - Live Edition
