@@ -16,6 +16,7 @@ RUN python get-pip.py
 RUN pip install paho-mqtt
 
 # Add centralEdge
+COPY sense.py /
 COPY centralEdgeV1-Client.py /
 
 # Cleanup to save space
