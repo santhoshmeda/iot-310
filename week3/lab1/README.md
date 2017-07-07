@@ -9,7 +9,11 @@ This lab will be entirely done ad-hoc in class. Please review the video for info
 Effectively run this command:
 
 ```bash
-curl -sSL https://get.docker.com | sh
+# Install Docker on RPi
+pi$ curl -sSL https://get.docker.com | sh
+
+# Add docker to a non-root user
+pi$ sudo usermod -aG docker pi
 ```
 
 ## Use Case 1 - Live Edition
