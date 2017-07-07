@@ -15,16 +15,26 @@ pi$ curl -sSL https://get.docker.com | sh
 # Add docker to a non-root user
 pi$ sudo usermod -aG docker pi
 
+# Pull base RPi image from Dockerhub
 pi$ docker pull resin/rpi-raspbian
 
-# Play around
+# Play around (use "bash" command on resin/rpi-raspbian iamge)
 pi$ docker run -it resin/rpi-raspbian bash
 
 # Build image (this reads from Dockerfile in local directory)
 pi$ docker build -t sense .
 
+# Review images currently on system
+pi$ docker images
+
 # Run in privileged mode
 pi$ docker run -d --privileged=true sense
+
+# Upload image to Dockerhub
+pi$ docker login
+# Replace [DOCKERHUB_USERNAME]
+pi$ docker tag sense [DOCKERHUB_USERNAME]/sense
+pi$ docker push [DOCKERHUB_USERNAME]/sense
 ```
 
 ## Use Case 1 - Live Edition
