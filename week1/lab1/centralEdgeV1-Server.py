@@ -4,7 +4,7 @@ import paho.mqtt.client as paho
 import json
 import ast
 
-hostname = "iot7643"
+hostname = "iot6041"
 brokerHost = "test.mosquitto.org"     # Local MQTT broker
 brokerPort   = 1883          # Local MQTT port
 brokerTopic = "iot-310b"  # Local MQTT topic to monitor

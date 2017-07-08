@@ -4,7 +4,7 @@ import socket
 import paho.mqtt.client as paho
 from sense import PiSenseHat
 
-hostname = "iot7643"
+hostname = "iot6041"
 brokerHost = "test.mosquitto.org"     # Local MQTT broker
 brokerPort   = 1883          # Local MQTT port
 brokerTopic = "iot-310b"  # Local MQTT topic to monitor
