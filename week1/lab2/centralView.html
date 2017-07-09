@@ -40,7 +40,7 @@
             screenPrint('CONNECTED TO: ' + wsMQTTConnectionString)
 
             // Subscribe to channel
-            var topic = 'iot-310b'
+            var topic = 'sensor-data'
             client.subscribe(topic)
             screenPrint('SUBSCRIBED TO: ' + topic)
             
@@ -65,7 +65,7 @@
 
 
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-        <a class="navbar-brand" href="#">CENTRAL FieldView 2017</a>
+        <a class="navbar-brand" href="#">CENTRAL FieldView </a>
     </nav>
 
     <div id="below-nav" class="container-fluid">

@@ -7,7 +7,7 @@ import ast
 hostname = "iot6041"
 brokerHost = "test.mosquitto.org"     # Local MQTT broker
 brokerPort   = 1883          # Local MQTT port
-brokerTopic = "iot-310b"  # Local MQTT topic to monitor
+brokerTopic = "sensor-data"  # Local MQTT topic to monitor
 brokerTimeout = 120          # Local MQTT session timeout
 
 # The callback for when a CONNACK message is received from the broker.
